@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/gofiber/fiber/v2/middleware/logger"
 	"github.com/google/uuid"
 	"log"
@@ -45,6 +46,7 @@ func main() {
 	})
 
 	app.Use(logger.New())
+	app.Use(cors.New())
 
 	app.Post("/tokens", func(c *fiber.Ctx) error {
 		var req TokenRequest
