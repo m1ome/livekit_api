@@ -3,7 +3,7 @@
 
 ## Deployment
 ```shell
-docker run -d -p 80:3000 w1n2k/livekit_api:1.0 -api_key=<your key> -api-secret=<your_secret>
+docker run -d -p 80:3000 w1n2k/livekit_api:1.0 -api_key=<your key> -api_secret=<your_secret>
 ```
 
 ## Token Request
